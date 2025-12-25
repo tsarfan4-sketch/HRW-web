@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRW</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f2f4f6;
+        text-align: center;
+    }
+
+    header {
+        background: #1f3a52;
+        color: #fff;
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+
+    .address, .phone {
+        margin-top: 8px;
+        font-size: 15px;
+    }
+
+    .header-buttons {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        background: #4a90e2;
+        color: white;
+        padding: 10px 22px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .btn.call {
+        background: #27ae60;
+    }
+
+    .content {
+        padding: 40px 15px;
+    }
+
+    /* ===== SLIDER ===== */
+    .slider-box {
+        width: 320px;
+        margin: auto;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        overflow: hidden;
+    }
+
+    .slider {
+        position: relative;
+        height: 220px;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+    }
+
+    .slide.active {
+        opacity: 1;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(31,58,82,0.7);
+        color: white;
+        border: none;
+        font-size: 18px;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+
+    .arrow.left { left: 8px; }
+    .arrow.right { right: 8px; }
+
+    /* ===== INFO BOX ===== */
+    .info-box {
+        padding: 15px;
+        background: #fafafa;
+        border-top: 1px solid #e0e0e0;
+        text-align: left;
+    }
+
+    .part-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1f3a52;
+    }
+
+    .part-desc {
+        font-size: 14px;
+        margin-top: 5px;
+        color: #555;
+    }
+
+    /* ===== MAP ===== */
+    .map-section {
+        margin-top: 50px;
+    }
+
+    .map-title {
+        font-size: 22px;
+        color: #1f3a52;
+        margin-bottom: 15px;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 900px;
+        height: 300px;
+        border: 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
+    footer {
+        margin-top: 50px;
+        padding: 15px;
+        background: #1f3a52;
+        color: white;
+        font-size: 14px;
+    }
+    /* ===== ABOUT US ===== */
+.about-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 25px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+.about-section h2 {
+    font-size: 28px;
+    color: #1f3a52;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-text {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.since-badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 12px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    font-size: 13px;
+    color: #ffffff;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>HINDUSTHAN RADIATOR WORKS</h1>
+<div class="since-badge">Since 2005</div>
+
+    <div class="address">
+        Melarannoor Rd, Melarannoor, Karamana,<br>
+        Thiruvananthapuram, Kerala 695002
+    </div>
+
+    <div class="phone">
+        Ph: 9895054383, 8921283941
+    </div>
+
+    <div class="header-buttons">
+        <!-- CALL BUTTON -->
+        <a href="tel:9895054383" class="btn call">📞 Call Now</a>
+
+        <!-- DIRECTION BUTTON -->
+        <a href="https://maps.app.goo.gl/KJDWrhCWUJqCSLBD6" class="btn">Get Directions</a>
+    </div>
+</header>
+
+<div class="content">
+
+    <!-- SLIDER -->
+    <div class="slider-box">
+        <div class="slider">
+            <div class="slide active"><img src="Radiator.jpg"></div>
+            <div class="slide"><img src="radiator-plastic-tank.jpg"></div>
+            <div class="slide"><img src="radiator3.jpg"></div>
+
+            <button class="arrow left" onclick="prev()">❮</button>
+            <button class="arrow right" onclick="next()">❯</button>
+        </div>
+
+        <div class="info-box">
+            <div class="part-name" id="partName">Car Radiator</div>
+            <div class="part-desc" id="partDesc">
+                High quality radiator suitable for cars and light vehicles.
+            </div>
+        </div>
+    </div>
+<!-- ABOUT US SECTION -->
+<div class="about-section">
+
+    <h2>About Us</h2>
+
+    <p class="about-text">
+        Hindusthan Radiator Works is a trusted name in radiator sales and services,
+        serving customers with dedication and quality workmanship since 2005.
+        We specialize in radiator repairing for all types of vehicles including
+        cars, trucks and commercial vehicles.
+    </p>
+
+    <p class="about-text">
+        Our experienced and trustworthy staff ensure the best solutions using
+        high-quality spare parts. Along with radiator repair, we also provide
+        sales of radiator tanks and complete radiator units, delivering reliable
+        performance and long-lasting results.
+    </p>
+
+    <p class="about-text">
+        With a strong focus on customer satisfaction, timely service and fair
+        pricing, Hindusthan Radiator Works continues to be the preferred choice
+        for radiator repair and replacement services in Thiruvananthapuram.
+    </p>
+
+</div>
+    <!-- GOOGLE MAP -->
+    <div class="map-section">
+        <div class="map-title">Find Us on Google Maps</div>
+
+        <!-- PASTE YOUR GOOGLE MAP EMBED LINK BELOW -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0986878162857!2d76.96203647501258!3d8.489785091551573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05ba534a085673%3A0x21a8eec1462dd235!2sHindustan%20Radiator%20Works!5e0!3m2!1sen!2sin!4v1766683316675!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 HINDUSTHAN RADIATOR WORKS
+</footer>
+
+<script>
+    const slides = document.querySelectorAll(".slide");
+    const parts = [
+        { name: "Radiators", desc: "High quality radiators of all types of vehicles" },
+        { name: "Radiator Tanks", desc: "Top and bottom tanks of different types of radiators" },
+        { name: "Radiator Spare Parts", desc: "Radiator cores, caps, hoses and coolents etc available." }
+        
+    ];
+
+    let index = 0;
+
+    function showSlide(i) {
+        slides.forEach(s => s.classList.remove("active"));
+        slides[i].classList.add("active");
+        partName.innerText = parts[i].name;
+        partDesc.innerText = parts[i].desc;
+    }
+
+    function next() {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    }
+
+    function prev() {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+    }
+</script>
+
+</body>
+</html>
