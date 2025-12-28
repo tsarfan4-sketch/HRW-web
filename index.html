@@ -6,202 +6,126 @@
 <title>Hindusthan Radiator Works</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f2f4f6;
-    text-align: center;
+body{
+    margin:0;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#f2f4f6;
+    text-align:center;
 }
 
-header {
-    background: #1f3a52;
-    color: #fff;
-    padding: 30px 15px;
+/* HEADER */
+    color:#fff;
+    color:#fff;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
 }
+.arrow.left{left:8px;}
+.arrow.right{right:8px;}
 
-header h1 {
-    margin: 0;
-    font-size: 36px;
+.info-box{
+    padding:15px;
+    background:#fafafa;
+    text-align:left;
 }
-
-.since-badge {
-    margin-top: 8px;
-    display: inline-block;
-    padding: 4px 12px;
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 20px;
-    font-size: 13px;
+.part-name{
+    font-size:18px;
+    font-weight:600;
+    color:#1f3a52;
 }
-
-.address,.phone {
-    margin-top: 8px;
-    font-size: 15px;
-}
-
-.header-buttons {
-    margin-top: 18px;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    background: #4a90e2;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-.btn.call { background: #27ae60; }
-
-.content { padding: 40px 15px; }
-
-/* SLIDER */
-.slider-box {
-    max-width: 360px;
-    margin: auto;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
-.slider { position: relative; height: 220px; }
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: 0.6s;
-}
-
-.slide.active { opacity: 1; }
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(31,58,82,0.7);
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-}
-
-.arrow.left { left: 8px; }
-.arrow.right { right: 8px; }
-
-.info-box {
-    padding: 15px;
-    text-align: left;
-    background: #fafafa;
-}
-
-.part-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1f3a52;
-}
-
-.part-desc { font-size: 14px; }
+.part-desc{font-size:14px;color:#555;}
 
 /* ABOUT + PRODUCTS */
-.about-section {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 40px 25px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+.about-section{
+    max-width:900px;
+    margin:60px auto;
+    padding:40px 25px;
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.1);
 }
-
-.about-section h2 {
-    color: #1f3a52;
-    margin-bottom: 20px;
+.about-section h2{
+    color:#1f3a52;
+    margin-bottom:20px;
 }
-
-.about-text {
-    text-align: justify;
-    line-height: 1.8;
-    color: #444;
+.about-text{
+    text-align:justify;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:15px;
 }
 
 /* PRODUCTS */
-.product-categories {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+.product-categories{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+.category{
+    background:#1f3a52;
+    color:#fff;
+    padding:14px 22px;
+    border-radius:6px;
+    cursor:pointer;
+}
+.category:hover{background:#4a90e2;}
+
+.product-search{
+    width:100%;
+    max-width:300px;
+    padding:10px;
+    margin:15px auto 25px;
+    display:block;
 }
 
-.category {
-    background: #1f3a52;
-    color: white;
-    padding: 14px 22px;
-    border-radius: 6px;
-    cursor: pointer;
+.product-gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:18px;
 }
-
-.category:hover { background: #4a90e2; }
-
-.product-search {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    margin: 15px auto;
-    display: block;
+.product-card{
+    background:#fff;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.12);
+    cursor:pointer;
 }
-
-.product-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
-    gap: 18px;
+.product-card img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:6px;
 }
-
-.product-card {
-    background: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-    cursor: pointer;
-}
-
-.product-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.product-name {
-    margin-top: 8px;
-    font-weight: 600;
-    color: #1f3a52;
+.product-name{
+    margin-top:8px;
+    font-weight:600;
+    color:#1f3a52;
 }
 
 /* MAP */
-iframe {
-    width: 100%;
-    max-width: 900px;
-    height: 300px;
-    border-radius: 8px;
-    border: 0;
+.map-section{margin-top:50px;}
+.map-title{
+    font-size:22px;
+    color:#1f3a52;
+    margin-bottom:15px;
+}
+iframe{
+    width:100%;
+    max-width:900px;
+    height:300px;
+    border:0;
+    border-radius:8px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.12);
 }
 
-footer {
-    background: #1f3a52;
-    color: white;
-    padding: 15px;
+/* FOOTER */
+footer{
+    background:#1f3a52;
+    color:#fff;
+    padding:15px;
+    margin-top:50px;
 }
 </style>
 </head>
@@ -211,11 +135,14 @@ footer {
 <header>
 <h1>HINDUSTHAN RADIATOR WORKS</h1>
 <div class="since-badge">Since 2005</div>
+
 <div class="address">
 Melarannoor Rd, Melarannoor, Karamana,<br>
 Thiruvananthapuram, Kerala 695002
 </div>
+
 <div class="phone">Ph: 9895054383, 8921283941</div>
+
 <div class="header-buttons">
 <a href="tel:9895054383" class="btn call">📞 Call Now</a>
 <a href="https://maps.app.goo.gl/KJDWrhCWUJqCSLBD6" class="btn">Get Directions</a>
@@ -224,49 +151,20 @@ Thiruvananthapuram, Kerala 695002
 
 <div class="content">
 
+<!-- SLIDER -->
 <div class="slider-box">
 <div class="slider">
-<div class="slide active"><img src="Radiator.jpg"></div>
-<div class="slide"><img src="radiator-plastic-tank.jpg"></div>
-<div class="slide"><img src="radiator3.jpg"></div>
-<button type="button" class="arrow left" onclick="prev()">❮</button>
-<button type="button" class="arrow right" onclick="next()">❯</button>
-</div>
-<div class="info-box">
-<div class="part-name" id="partName">Radiators</div>
-<div class="part-desc" id="partDesc">High quality radiators of all types of vehicles</div>
-</div>
-</div>
-
-<!-- PRODUCTS -->
-<div class="about-section">
-<h2>Our Products</h2>
-
-<div class="product-categories">
-<div class="category" onclick="showProducts('radiators')">Radiators</div>
-<div class="category" onclick="showProducts('tanks')">Radiator Tanks</div>
-<div class="category" onclick="showProducts('spares')">Radiator Spare Parts</div>
-</div>
-
-<input type="text" id="productSearch" class="product-search"
-placeholder="Search product..." onkeyup="filterProducts()">
-
-<div id="productGallery" class="product-gallery"></div>
-</div>
-
-</div>
-
-<footer>© 2025 HINDUSTHAN RADIATOR WORKS</footer>
-
+<!-- ABOUT US -->
 <script>
+/* SLIDER */
 const slides=document.querySelectorAll(".slide");
 const partName=document.getElementById("partName");
 const partDesc=document.getElementById("partDesc");
 
 const parts=[
 {name:"Radiators",desc:"High quality radiators of all types of vehicles"},
-{name:"Radiator Tanks",desc:"Top and bottom tanks"},
-{name:"Radiator Spare Parts",desc:"Cores, caps, hoses"}
+{name:"Radiator Tanks",desc:"Top and bottom tanks of different radiators"},
+{name:"Radiator Spare Parts",desc:"Cores, caps, hoses and coolants available"}
 ];
 
 let index=0;
@@ -279,50 +177,8 @@ partDesc.innerText=parts[i].desc;
 function next(){index=(index+1)%slides.length;showSlide(index);}
 function prev(){index=(index-1+slides.length)%slides.length;showSlide(index);}
 
-/* PRODUCTS LOGIC */
-const whatsappNumber="918921283941";
-let currentProducts=[];
-
-const products={
-radiators:[
-{name:"Car Radiator",img:"Radiator.jpg"},
-{name:"Truck Radiator",img:"radiator3.jpg"}
-],
-tanks:[
-{name:"Plastic Radiator Tank",img:"radiator-plastic-tank.jpg"}
-],
-spares:[
-{name:"Radiator Cap",img:"radiator-cap.jpg"},
-{name:"Radiator Hose",img:"radiator-hose.jpg"}
-]
-};
-
-function showProducts(type){
-currentProducts=products[type];
-document.getElementById("productSearch").value="";
-displayProducts(currentProducts);
-}
-
-function displayProducts(list){
-const g=document.getElementById("productGallery");
-g.innerHTML="";
-list.forEach(p=>{
-g.innerHTML+=`
-<div class="product-card"
-onclick="sendWhatsApp('${p.name}','${p.img}')">
-<img src="${p.img}">
-<div class="product-name">${p.name}</div>
-</div>`;
-});
-}
-
-function filterProducts(){
-const t=document.getElementById("productSearch").value.toLowerCase();
-displayProducts(currentProducts.filter(p=>p.name.toLowerCase().includes(t)));
-}
-
-function sendWhatsApp(name,img){
-const msg=`Hi, do you have this product?\nProduct: ${name}\nImage: ${location.origin}/${img}`;
+/* PRODUCTS + SEARCH + WHATSAPP */
+const msg=`Hi, do you have this product?\n\nProduct: ${name}\nImage: ${location.origin}/${img}`;
 window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`,"_blank");
 }
 </script>
