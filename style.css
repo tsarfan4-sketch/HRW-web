@@ -11,9 +11,7 @@ body {
     transition: background 0.5s, color 0.5s;
     opacity: 1;
     min-height: 100vh;
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;
+    
 }
 
 /* ===== DARK/LIGHT MODE ===== */
@@ -248,49 +246,4 @@ body.fade-out {
 .form-box button:hover {
     transform: scale(1.05);
     background: #ff8f00;
-}
-@media (max-width: 768px) {
-
-    /* Headings */
-    h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    /* Buttons */
-    .btn, button {
-        width: 100%;
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-
-    /* Navigation / menu buttons */
-    .menu {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* Sections */
-    section, .box, .card {
-        padding: 15px;
-    }
-
-    /* Images */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-@media (max-width: 768px) {
-    .top-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
 }
