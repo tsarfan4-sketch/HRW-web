@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions - HRW</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #1e1e2f;
+    color: #f0f0f0;
+    text-align: center;
+    transition: background 0.5s, color 0.5s;
+}
+header {
+    background: #2c2c44;
+    color: #fff;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+.info-header {
+    font-size: 14px;
+    margin-top: 6px;
+}
+.nav-buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.nav-link {
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    background: #4a4a6a;
+    color: #fff;
+    transition: all 0.3s;
+}
+.nav-link:hover {
+    background: #6a6aae;
+    transform: scale(1.05);
+}
+.dark-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#themeToggle {
+    padding: 6px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #555;
+    color: #fff;
+}
+.content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    margin-top: 200px;
+    background: #2c2c44;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    text-align: justify;
+    line-height: 1.8;
+}
+.content h2 {
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+footer {
+    margin-top: 240px;
+    padding: 15px;
+    background: #2c2c44;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>HINDUSTHAN RADIATOR WORKS</h1>
+    <div class="info-header">Sales & Service | Proprietor: Thanzeer D | Since 2005</div>
+    <div class="nav-buttons">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="enquiry.html" class="nav-link">Radiator & Tank Request</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="terms.html" class="nav-link">Terms</a>
+    </div>
+    
+</header>
+
+<div class="content">
+    <h2>Terms & Conditions</h2>
+    <p>
+        Welcome to Hindusthan Radiator Works website. By using our services, you agree to comply with and be bound by the following terms and conditions.
+    </p>
+    <p>
+        1. All radiator and tank requests sent via this website are processed as per availability and company policies.
+    </p>
+    <p>
+        2. We make every effort to ensure accurate product details, but we cannot guarantee 100% accuracy of specifications, images, or descriptions.
+    </p>
+    <p>
+        3. Payments, deliveries, and service requests are subject to our confirmation. We reserve the right to accept or reject any order.
+    </p>
+    <p>
+        4. Any personal information submitted via forms will be used strictly for processing your requests and will not be shared with third parties.
+    </p>
+    <p>
+        5. By using our site, you agree that the company is not liable for any indirect or consequential damages arising from use of our services.
+    </p>
+</div>
+
+<footer>
+    © 2025 HINDUSTHAN RADIATOR WORKS
+</footer>
+
+<script>
+// Dark/Light Toggle
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    if(document.body.classList.contains("light-mode")){
+        document.body.style.background="#f0f0f0";
+        document.body.style.color="#1e1e2f";
+        themeToggle.textContent="🌙";
+    } else {
+        document.body.style.background="#1e1e2f";
+        document.body.style.color="#f0f0f0";
+        themeToggle.textContent="☀️";
+    }
+});
+</script>
+
+</body>
+</html>
