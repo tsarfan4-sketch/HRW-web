@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiator & Tank Request - HRW</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #1e1e2f; /* dark aesthetic background */
+    color: #f0f0f0;
+    text-align: center;
+    transition: background 0.5s, color 0.5s;
+}
+header {
+    background: #2c2c44;
+    color: #fff;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+.info-header {
+    font-size: 14px;
+    margin-top: 6px;
+}
+.nav-buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.nav-link {
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    background: #4a4a6a;
+    color: #fff;
+    transition: all 0.3s;
+}
+.nav-link:hover {
+    background: #6a6aae;
+    transform: scale(1.05);
+}
+.dark-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#themeToggle {
+    padding: 6px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #555;
+    color: #fff;
+}
+.content {
+    padding: 40px 20px;
+   margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.form-box {
+    background: #2c2c44;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+.form-box:hover {
+    transform: translateY(-5px);
+}
+.form-box h3 {
+    color: #ffd700; /* aesthetic golden heading */
+    margin-bottom: 15px;
+}
+.form-box input, .form-box select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: none;
+}
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    background: #ff9800;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+.form-box button:hover {
+    background: #e68a00;
+    transform: scale(1.05);
+}
+footer {
+    margin-top: 50px;
+    padding: 15px;
+    background: #2c2c44;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>HINDUSTHAN RADIATOR WORKS</h1>
+    <div class="info-header">Sales & Service | Proprietor: Thanzeer D | Since 2005</div>
+    <div class="nav-buttons">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="enquiry.html" class="nav-link">Radiator & Tank Request</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="terms.html" class="nav-link">Terms</a>
+    </div>
+   
+</header>
+
+<div class="content">
+    <div class="form-box">
+        <h3>Radiator & Tank Request – Radiator</h3>
+        <label>Vehicle Brand</label>
+        <input type="text" id="radBrand" placeholder="Eg: Maruti, Tata">
+        <label>Vehicle Model</label>
+        <input type="text" id="radModel" placeholder="Eg: Swift, Ace">
+        <label>Model Year</label>
+        <input type="text" id="radYear" placeholder="Eg: 2020">
+        <button onclick="sendRadiatorEnquiry()">📲 Send via WhatsApp</button>
+    </div>
+
+    <div class="form-box">
+        <h3>Radiator & Tank Request – Tank</h3>
+        <label>Vehicle Brand</label>
+        <input type="text" id="tankBrand" placeholder="Eg: Tata, Ashok Leyland">
+        <label>Vehicle Model</label>
+        <input type="text" id="tankModel" placeholder="Eg: 1613, Ace">
+        <label>Model Year</label>
+        <input type="text" id="tankYear" placeholder="Eg: 2019">
+        <label>Tank Type</label>
+        <select id="tankType">
+            <option value="">Select Tank Type</option>
+            <option value="Top Tank">Top Tank</option>
+            <option value="Bottom Tank">Bottom Tank</option>
+            <option value="Both Top & Bottom Tank">Both (Top & Bottom)</option>
+        </select>
+        <button onclick="sendTankEnquiry()">📲 Send via WhatsApp</button>
+    </div>
+</div>
+
+<footer>
+    © 2025 HINDUSTHAN RADIATOR WORKS
+</footer>
+
+<script>
+const whatsappNumber = "918921283941"; // your WhatsApp number
+
+// Dark/Light Toggle
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    if(document.body.classList.contains("light-mode")){
+        document.body.style.background="#f0f0f0";
+        document.body.style.color="#1e1e2f";
+        themeToggle.textContent="🌙";
+    } else {
+        document.body.style.background="#1e1e2f";
+        document.body.style.color="#f0f0f0";
+        themeToggle.textContent="☀️";
+    }
+});
+
+// Radiator WhatsApp
+function sendRadiatorEnquiry(){
+    const brand=document.getElementById("radBrand").value.trim();
+    const model=document.getElementById("radModel").value.trim();
+    const year=document.getElementById("radYear").value.trim();
+    if(!brand||!model||!year){alert("Please fill all details"); return;}
+    const message=`Hello, I need a radiator.\nBrand: ${brand}\nModel: ${model}\nYear: ${year}\nPlease let me know availability.`;
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,"_blank");
+}
+
+// Tank WhatsApp
+function sendTankEnquiry(){
+    const brand=document.getElementById("tankBrand").value.trim();
+    const model=document.getElementById("tankModel").value.trim();
+    const year=document.getElementById("tankYear").value.trim();
+    const tank=document.getElementById("tankType").value;
+    if(!brand||!model||!year||!tank){alert("Please fill all details"); return;}
+    const message=`Hello, I need a radiator tank.\nBrand: ${brand}\nModel: ${model}\nYear: ${year}\nTank Type: ${tank}\nPlease let me know availability.`;
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,"_blank");
+}
+</script>
+
+</body>
+</html>
